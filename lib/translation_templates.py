@@ -1,81 +1,21 @@
 class GCUS:
 
-	translate_dict={		
-		"TRANSACTION CODE":{
+	detail_record_A={		
+		'''TRANSACTION CODE; values include:
+“GC” = GCUS (Brokerage)
+“M1” = GCS1 (Bank Custody)''':{
 			"position":[0,2],
 			"type":"X",
 			"operation":"",
 		},
-		"RECORD INDICATOR VALUE":{
-			"position":[2,3],
-			"type":"X",
-			"operation":"",
+		'''TRADE DATE QUANTITY; number of shares traded, but not
+yet settled (add Pending/Split Quantity in Record A, 283-300, to
+this field to equal the T/D Quantity in NetX360)''':{
+			"position":[73,91],
+			"type":"9",
+			"operation":"div 5",
 		},
-		"RECORD ID SEQUENCE NUMBER":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"ACCOUNT NUMBER":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"CUSIP NUMBER":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"PORTFOLIO CURRENCY":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"Not Used 1":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"INVESTMENT PROFESSIONAL (IP) OF RECORD NUMBER":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"INTRODUCING BROKER DEALER (IBD) NUMBER":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"CURRENCY/SECURITY INDICATOR":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"ISSUE CURRENCY":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"DATE STAMP/TRADE DATE":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"DATE STAMP/SETTLEMENT DATE":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"TRADE DATE QUANTITY":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		},
-		"":{
-			"position":[],
-			"type":"",
-			"operation":"",
-		}
+
 	}
 
 
